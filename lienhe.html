@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liên Hệ - Khách Sạn Cao Cấp</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="navbar">
+        <div class="logo">
+         <h1><img src="images/logo.png" alt="Logo"> Khách Sạn Cao Cấp</h1>
+        </div>
+        <nav class="nav-menu">
+          <a href="trangchu.html">Trang Chủ</a>
+          <a href="phongnghi.html">Phòng Nghỉ</a>
+          <a href="dichvu.html">Dịch Vụ</a>
+          <a href="lienhe.html" class="active">Liên Hệ</a>
+        </nav>
+        <div class="auth-menu">
+          <button id="loginBtn" class="btn btn-outline">Đăng Nhập</button>
+          <button id="registerBtn" class="btn btn-primary">Đăng Ký</button>
+          <div id="userMenu" style="display: none;">
+            <span id="userName"></span>
+            <button id="logoutBtn" class="btn btn-secondary">Đăng Xuất</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container main-content">
+    <h1>Liên Hệ Với Chúng Tôi</h1>
+    
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 50px;">
+      <!-- Contact Form -->
+      <section class="contact-form">
+        <h2 style="text-align: left;">Gửi Tin Nhắn</h2>
+        <form id="contactForm" class="booking-form">
+          <div class="form-group">
+            <label>Họ và tên *</label>
+            <input type="text" id="contactName" required>
+          </div>
+
+          <div class="form-group">
+            <label>Email *</label>
+            <input type="email" id="contactEmail" required>
+          </div>
+
+          <div class="form-group">
+            <label>Số điện thoại</label>
+            <input type="tel" id="contactPhone">
+          </div>
+
+          <div class="form-group">
+            <label>Tiêu đề *</label>
+            <input type="text" id="contactSubject" required>
+          </div>
+
+          <div class="form-group">
+            <label>Nội dung *</label>
+            <textarea id="contactMessage" rows="6" required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Gửi Tin Nhắn</button>
+          <div id="contactMessage" style="margin-top: 15px;"></div>
+        </form>
+      </section>
+
+      <!-- Contact Info -->
+      <section class="contact-info">
+        <h2 style="text-align: left;">Thông Tin Liên Hệ</h2>
+        
+        <div style="background: white; padding: 30px; border-radius: 10px; box-shadow: var(--shadow);">
+          <div style="margin-bottom: 30px;">
+            <h3><i class="fas fa-map-marker-alt" style="color: var(--secondary-color); margin-right: 10px;"></i>Địa Chỉ</h3>
+            <p>123 Đường Chính, Thành Phố, Quốc Gia 12345</p>
+          </div>
+
+          <div style="margin-bottom: 30px;">
+            <h3><i class="fas fa-phone" style="color: var(--secondary-color); margin-right: 10px;"></i>Điện Thoại</h3>
+            <p><strong>Hotline:</strong> 1900 1234</p>
+            <p><strong>Lễ Tân:</strong> (84-2) 1234 5678</p>
+            <p><strong>Đặt Phòng:</strong> (84-2) 1234 5679</p>
+          </div>
+
+          <div style="margin-bottom: 30px;">
+            <h3><i class="fas fa-envelope" style="color: var(--secondary-color); margin-right: 10px;"></i>Email</h3>
+            <p><strong>Chính:</strong> info@hotel.com</p>
+            <p><strong>Đặt Phòng:</strong> booking@hotel.com</p>
+            <p><strong>Hỗ Trợ:</strong> support@hotel.com</p>
+          </div>
+
+          <div style="margin-bottom: 30px;">
+            <h3><i class="fas fa-clock" style="color: var(--secondary-color); margin-right: 10px;"></i>Giờ Làm Việc</h3>
+            <p><strong>Lễ Tân:</strong> 24/7</p>
+            <p><strong>Phòng Đặt Phòng:</strong> 8:00 - 20:00 (Tất cả các ngày)</p>
+            <p><strong>Văn Phòng:</strong> 9:00 - 18:00 (Thứ 2 - Thứ 6)</p>
+          </div>
+
+          <div>
+            <h3><i class="fas fa-share-alt" style="color: var(--secondary-color); margin-right: 10px;"></i>Kết Nối Với Chúng Tôi</h3>
+            <div class="social-links" style="gap: 20px;">
+              <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Map Section -->
+    <section class="map-section">
+      <h2>Vị Trí Khách Sạn</h2>
+      <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: var(--shadow); height: 400px;">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.0432844893196!2d106.67100801531655!3d10.769621789999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f3f4b1a4e1d%3A0x9c8a1e5d8c8e3f8e!2sDistrict%201%2C%20Ho%20Chi%20Minh%20City!5e0!3m2!1sen!2s!4v1234567890" width="100%" height="100%" style="border:none;border-radius:5px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" style="margin-top: 50px;">
+      <h2>Câu Hỏi Thường Gặp</h2>
+      
+      <div style="background: white; padding: 30px; border-radius: 10px; box-shadow: var(--shadow);">
+        <details style="margin-bottom: 20px; border-bottom: 1px solid var(--border-color); padding-bottom: 15px;">
+          <summary style="cursor: pointer; font-weight: 600; color: var(--primary-color);">
+            <i class="fas fa-chevron-right"></i> Khách sạn có phương tiện gửi xe không?
+          </summary>
+          <p style="margin-top: 10px; color: #666;">Có, chúng tôi cung cấp dịch vụ gửi xe miễn phí cho tất cả khách lưu trú. Bãi đỗ xe có camera an ninh 24/7.</p>
+        </details>
+
+        <details style="margin-bottom: 20px; border-bottom: 1px solid var(--border-color); padding-bottom: 15px;">
+          <summary style="cursor: pointer; font-weight: 600; color: var(--primary-color);">
+            <i class="fas fa-chevron-right"></i> Có thể check-in sớm được không?
+          </summary>
+          <p style="margin-top: 10px; color: #666;">Có thể, nếu phòng trống. Vui lòng liên hệ lễ tân với ít nhất 24 giờ trước. Check-in sớm có thể phải tính thêm phí.</p>
+        </details>
+
+        <details style="margin-bottom: 20px; border-bottom: 1px solid var(--border-color); padding-bottom: 15px;">
+          <summary style="cursor: pointer; font-weight: 600; color: var(--primary-color);">
+            <i class="fas fa-chevron-right"></i> Chính sách hủy đặt phòng như thế nào?
+          </summary>
+          <p style="margin-top: 10px; color: #666;">Hủy miễn phí nếu thực hiện ít nhất 3 ngày trước ngày nhận phòng. Hủy trong vòng 3 ngày sẽ tính phí 1 đêm.</p>
+        </details>
+
+        <details style="margin-bottom: 20px; border-bottom: 1px solid var(--border-color); padding-bottom: 15px;">
+          <summary style="cursor: pointer; font-weight: 600; color: var(--primary-color);">
+            <i class="fas fa-chevron-right"></i> Khách sạn có thú cưng được không?
+          </summary>
+          <p style="margin-top: 10px; color: #666;">Có, chúng tôi chào đón thú cưng. Vui lòng thông báo khi đặt phòng. Có thể tính phí thêm 200.000 VND/đêm.</p>
+        </details>
+
+        <details style="margin-bottom: 20px; padding-bottom: 0;">
+          <summary style="cursor: pointer; font-weight: 600; color: var(--primary-color);">
+            <i class="fas fa-chevron-right"></i> Giờ check-out là mấy giờ?
+          </summary>
+          <p style="margin-top: 10px; color: #666;">Check-out chuẩn là 12:00 trưa. Check-out muộn có thể được phê duyệt, liên hệ lễ tân trước 10:00 sáng.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Khách Sạn Cao Cấp</h4>
+          <p>Địa chỉ: 123 Đường Chính, Thành Phố, Việt Nam</p>
+          <p>Hotline: <strong>1900 1234</strong></p>
+        </div>
+        <div class="footer-section">
+          <h4>Liên Kết Nhanh</h4>
+          <ul>
+            <li><a href="phongnghi.html">Phòng Nghỉ</a></li>
+            <li><a href="dichvu.html">Dịch Vụ</a></li>
+            <li><a href="lienhe.html">Liên Hệ</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Kết Nối</h4>
+          <div class="social-links">
+            <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Khách Sạn Cao Cấp. Tất cả quyền được bảo lưu.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Login Modal -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Đăng Nhập</h2>
+      <form id="loginForm" class="auth-form">
+        <div class="form-group">
+          <label>Tên đăng nhập *</label>
+          <input type="text" placeholder="Nhập tên đăng nhập" id="loginUsername" required>
+        </div>
+        <div class="form-group">
+          <label>Mật khẩu *</label>
+          <input type="password" placeholder="Nhập mật khẩu" id="loginPassword" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Đăng Nhập</button>
+        <div id="loginMessage"></div>
+        <p>Chưa có tài khoản? <a href="" onclick="openRegisterModal(event)">Đăng ký ngay</a></p>
+      </form>
+    </div>
+  </div>
+
+  <!-- Register Modal -->
+  <div id="registerModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Đăng Ký</h2>
+      <form id="registerForm" class="auth-form">
+        <div class="form-group">
+          <label>Họ và tên *</label>
+          <input type="text" placeholder="Nhập họ và tên" id="registerName" required>
+        </div>
+        <div class="form-group">
+          <label>Tên đăng nhập *</label>
+          <input type="text" placeholder="Nhập tên đăng nhập" id="registerUsername" required>
+        </div>
+        <div class="form-group">
+          <label>Email *</label>
+          <input type="email" placeholder="Nhập email" id="registerEmail" required>
+        </div>
+        <div class="form-group">
+          <label>Mật khẩu *</label>
+          <input type="password" placeholder="Nhập mật khẩu (tối thiểu 6 ký tự)" id="registerPassword" required>
+        </div>
+        <div class="form-group">
+          <label>Xác nhận mật khẩu *</label>
+          <input type="password" placeholder="Xác nhận mật khẩu" id="registerConfirmPassword" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Đăng Ký</button>
+        <div id="registerMessage"></div>
+        <p>Đã có tài khoản? <a href="" onclick="openLoginModal(event)">Đăng nhập ngay</a></p>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

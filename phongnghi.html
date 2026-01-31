@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Danh Sách Phòng - Khách Sạn Cao Cấp</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/rooms.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="navbar">
+        <div class="logo">
+          <h1><img src="images/logo.png" alt="Logo"> Khách Sạn Cao Cấp</h1>
+        </div>
+        <nav class="nav-menu">
+          <a href="trangchu.html">Trang Chủ</a>
+          <a href="phongnghi.html" class="active">Phòng Nghỉ</a>
+          <a href="dichvu.html">Dịch Vụ</a>
+          <a href="lienhe.html">Liên Hệ</a>
+        </nav>
+        <div class="auth-menu">
+          <button id="loginBtn" class="btn btn-outline">Đăng Nhập</button>
+          <button id="registerBtn" class="btn btn-primary">Đăng Ký</button>
+          <div id="userMenu" style="display: none;">
+            <span id="userName"></span>
+            <button id="logoutBtn" class="btn btn-secondary">Đăng Xuất</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container main-content">
+    <h1>Danh Sách Phòng Của Chúng Tôi</h1>
+    
+    <!-- Filter Section -->
+    <section class="filter-section">
+      <div class="filter-group">
+        <label>Loại phòng:</label>
+        <select id="roomTypeFilter">
+          <option value="">Tất cả</option>
+          <option value="Standard">Standard</option>
+          <option value="Deluxe">Deluxe</option>
+          <option value="Suite">Suite</option>
+          <option value="Family">Gia đình</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label>Sức chứa:</label>
+        <select id="capacityFilter">
+          <option value="">Tất cả</option>
+          <option value="2">2 người</option>
+          <option value="4">4 người</option>
+          <option value="6">6+ người</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label>Mức giá:</label>
+        <select id="priceFilter">
+          <option value="">Tất cả</option>
+          <option value="500000">Dưới 500K</option>
+          <option value="1000000">500K - 1 triệu</option>
+          <option value="1500000">Trên 1 triệu</option>
+        </select>
+      </div>
+      <button onclick="resetFilters()" class="btn btn-outline">Xóa Bộ Lọc</button>
+    </section>
+
+    <!-- Rooms Grid -->
+    <section class="rooms-grid-section">
+      <div id="roomsList" class="rooms-grid">
+        <!-- Loaded from API -->
+      </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section class="booking-section">
+      <h2>Đặt Phòng</h2>
+      <form id="bookingForm" class="booking-form">
+        <div class="form-group">
+          <label>Họ và tên *</label>
+          <input type="text" id="bookingName" required>
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" id="bookingEmail">
+        </div>
+        <div class="form-group">
+          <label>Số điện thoại *</label>
+          <input type="tel" id="bookingPhone" required>
+        </div>
+        <div class="form-group">
+          <label>Ngày nhận phòng *</label>
+          <input type="date" id="bookingCheckin" required>
+        </div>
+        <div class="form-group">
+          <label>Ngày trả phòng *</label>
+          <input type="date" id="bookingCheckout" required>
+        </div>
+        <div class="form-group">
+          <label>Chọn phòng *</label>
+          <select id="bookingRoomId" required>
+            <option value="">-- Chọn phòng --</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Số khách</label>
+          <input type="number" id="bookingGuests" min="1" value="1">
+        </div>
+        <button type="submit" class="btn btn-primary">Đặt Phòng</button>
+        <div id="bookingMessage"></div>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Khách Sạn Cao Cấp</h4>
+          <p>Địa chỉ: 123 Đường Chính, Thành Phố, Việt Nam</p>
+          <p>Hotline: <strong>1900 1234</strong></p>
+        </div>
+        <div class="footer-section">
+          <h4>Liên Kết Nhanh</h4>
+          <ul>
+            <li><a href="phongnghi.html">Phòng Nghỉ</a></li>
+            <li><a href="dichvu.html">Dịch Vụ</a></li>
+            <li><a href="lienhe.html">Liên Hệ</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Kết Nối</h4>
+          <div class="social-links">
+            <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Khách Sạn Cao Cấp. Tất cả quyền được bảo lưu.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Login Modal -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Đăng Nhập</h2>
+      <form id="loginForm" class="auth-form">
+        <div class="form-group">
+          <label>Tên đăng nhập *</label>
+          <input type="text" placeholder="Nhập tên đăng nhập" id="loginUsername" required>
+        </div>
+        <div class="form-group">
+          <label>Mật khẩu *</label>
+          <input type="password" placeholder="Nhập mật khẩu" id="loginPassword" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Đăng Nhập</button>
+        <div id="loginMessage"></div>
+        <p>Chưa có tài khoản? <a href="" onclick="openRegisterModal(event)">Đăng ký ngay</a></p>
+      </form>
+    </div>
+  </div>
+
+  <!-- Register Modal -->
+  <div id="registerModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Đăng Ký</h2>
+      <form id="registerForm" class="auth-form">
+        <div class="form-group">
+          <label>Họ và tên *</label>
+          <input type="text" placeholder="Nhập họ và tên" id="registerName" required>
+        </div>
+        <div class="form-group">
+          <label>Tên đăng nhập *</label>
+          <input type="text" placeholder="Nhập tên đăng nhập" id="registerUsername" required>
+        </div>
+        <div class="form-group">
+          <label>Email *</label>
+          <input type="email" placeholder="Nhập email" id="registerEmail" required>
+        </div>
+        <div class="form-group">
+          <label>Mật khẩu *</label>
+          <input type="password" placeholder="Nhập mật khẩu (tối thiểu 6 ký tự)" id="registerPassword" required>
+        </div>
+        <div class="form-group">
+          <label>Xác nhận mật khẩu *</label>
+          <input type="password" placeholder="Xác nhận mật khẩu" id="registerConfirmPassword" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Đăng Ký</button>
+        <div id="registerMessage"></div>
+        <p>Đã có tài khoản? <a href="" onclick="openLoginModal(event)">Đăng nhập ngay</a></p>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/rooms.js"></script>
+</body>
+</html>

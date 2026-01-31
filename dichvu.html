@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dịch Vụ - Khách Sạn Cao Cấp</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/services.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="navbar">
+        <div class="logo">
+          <h1><img src="images/logo.png" alt="Logo"> Khách Sạn Cao Cấp</h1>
+        </div>
+        <nav class="nav-menu">
+          <a href="trangchu.html">Trang Chủ</a>
+          <a href="phongnghi.html">Phòng Nghỉ</a>
+          <a href="dichvu.html" class="active">Dịch Vụ</a>
+          <a href="lienhe.html">Liên Hệ</a>
+        </nav>
+        <div class="auth-menu">
+          <button id="loginBtn" class="btn btn-outline">Đăng Nhập</button>
+          <button id="registerBtn" class="btn btn-primary">Đăng Ký</button>
+          <div id="userMenu" style="display: none;">
+            <span id="userName"></span>
+            <button id="logoutBtn" class="btn btn-secondary">Đăng Xuất</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container main-content">
+    <h1>Dịch Vụ Của Chúng Tôi</h1>
+    
+    <!-- Services Grid -->
+    <section class="services">
+      <div class="services-grid">
+        <div class="service-card">
+          <i class="fas fa-wifi"></i>
+          <h3>WiFi Miễn Phí</h3>
+          <p>Tốc độ cao 100Mbps trong toàn bộ khách sạn. Kết nối nhanh và ổn định cho công việc hoặc giải trí.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-dumbbell"></i>
+          <h3>Phòng Tập Gym</h3>
+          <p>Trang thiết bị hiện đại từ các hãng nổi tiếng. Mở cửa 24/7 với huấn luyện viên chuyên nghiệp.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-utensils"></i>
+          <h3>Nhà Hàng 5 Sao</h3>
+          <p>Ẩm thực đa dạng từ các đầu bếp chuyên nghiệp. Phục vụ bữa sáng, trưa, tối và dịch vụ phòng.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-spa"></i>
+          <h3>Spa & Massage</h3>
+          <p>Thư giãn với các liệu pháp massage truyền thống. Các nhân viên có chứng chỉ quốc tế.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-swimming-pool"></i>
+          <h3>Bể Bơi Ngoài Trời</h3>
+          <p>Bể bơi Olympic với tầm nhìn đẹp thành phố. Mở cửa từ 6 sáng đến 10 tối.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-bell"></i>
+          <h3>Dịch Vụ Khách Sạn</h3>
+          <p>Hỗ trợ 24/7 với đội ngũ chuyên nghiệp. Sẵn sàng giải quyết mọi yêu cầu của bạn.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-car"></i>
+          <h3>Dịch Vụ Xe</h3>
+          <p>Cho thuê xe hơi cao cấp. Hỗ trợ đưa đón sân bay và tour du lịch thành phố.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-business-time"></i>
+          <h3>Phòng Họp & Hội Thảo</h3>
+          <p>Các phòng hiện đại với thiết bị đầy đủ. Hỗ trợ sự kiện từ 10 đến 500 người.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-baby"></i>
+          <h3>Dịch Vụ Gia Đình</h3>
+          <p>Chăm sóc trẻ em. Phòng chơi, menu đặc biệt và an ninh tối ưu cho con em yêu.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Additional Services Info -->
+    <section class="services-info">
+      <h2>Thông Tin Thêm</h2>
+      <div style="background: white; padding: 30px; border-radius: 10px; box-shadow: var(--shadow);">
+        <h3>Gói Dịch Vụ Đặc Biệt</h3>
+        
+        <h4 style="margin-top: 20px; color: var(--secondary-color);">🎉 Gói Tổ Chức Sự Kiện</h4>
+        <p>Để tổ chức sự kiện, hội nghị, tiệc cưới hoặc hội thảo của bạn tại khách sạn.</p>
+        <ul style="margin-left: 20px;">
+          <li>Phòng họp với công nghệ trình chiếu hiện đại</li>
+          <li>Dịch vụ catering chuyên nghiệp</li>
+          <li>Đội ngũ sự kiện trợ giúp chi tiết</li>
+          <li>Giảm giá đặc biệt cho tập thể khách</li>
+        </ul>
+
+        <h4 style="margin-top: 20px; color: var(--secondary-color);">💑 Gói Tìm Trăng Mật</h4>
+        <p>Tạo khoảnh khắc lãng mạn với gói honeymoon đặc biệt.</p>
+        <ul style="margin-left: 20px;">
+          <li>Phòng Suite sang trọng với bồn tắm Jacuzzi</li>
+          <li>Bữa tối lãng mạn trên ban công</li>
+          <li>Dịch vụ SPA cặp đôi</li>
+          <li>Tặng kèm trái cây, rượu sâm banh</li>
+        </ul>
+
+        <h4 style="margin-top: 20px; color: var(--secondary-color);">✈️ Gói Du Lịch Toàn Gói</h4>
+        <p>Trọn gói tour du lịch bao gồm phòng, ăn, và các hoạt động tham quan.</p>
+        <ul style="margin-left: 20px;">
+          <li>Lưu trú tại khách sạn 5 sao</li>
+          <li>Bữa ăn theo chương trình</li>
+          <li>Hướng dẫn viên du lịch chuyên nghiệp</li>
+          <li>Vận chuyển xe hiện đại</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Khách Sạn Cao Cấp</h4>
+          <p>Địa chỉ: 123 Đường Chính, Thành Phố, Việt Nam</p>
+          <p>Hotline: <strong>1900 1234</strong></p>
+        </div>
+        <div class="footer-section">
+          <h4>Liên Kết Nhanh</h4>
+          <ul>
+            <li><a href="phongnghi.html">Phòng Nghỉ</a></li>
+            <li><a href="dichvu.html">Dịch Vụ</a></li>
+            <li><a href="lienhe.html">Liên Hệ</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Kết Nối</h4>
+          <div class="social-links">
+            <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Khách Sạn Cao Cấp. Tất cả quyền được bảo lưu.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Login Modal -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Đăng Nhập</h2>
+      <form id="loginForm" class="auth-form">
+        <div class="form-group">
+          <label>Tên đăng nhập *</label>
+          <input type="text" placeholder="Nhập tên đăng nhập" id="loginUsername" required>
+        </div>
+        <div class="form-group">
+          <label>Mật khẩu *</label>
+          <input type="password" placeholder="Nhập mật khẩu" id="loginPassword" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Đăng Nhập</button>
+        <div id="loginMessage"></div>
+        <p>Chưa có tài khoản? <a href="" onclick="openRegisterModal(event)">Đăng ký ngay</a></p>
+      </form>
+    </div>
+  </div>
+
+  <!-- Register Modal -->
+  <div id="registerModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Đăng Ký</h2>
+      <form id="registerForm" class="auth-form">
+        <div class="form-group">
+          <label>Họ và tên *</label>
+          <input type="text" placeholder="Nhập họ và tên" id="registerName" required>
+        </div>
+        <div class="form-group">
+          <label>Tên đăng nhập *</label>
+          <input type="text" placeholder="Nhập tên đăng nhập" id="registerUsername" required>
+        </div>
+        <div class="form-group">
+          <label>Email *</label>
+          <input type="email" placeholder="Nhập email" id="registerEmail" required>
+        </div>
+        <div class="form-group">
+          <label>Mật khẩu *</label>
+          <input type="password" placeholder="Nhập mật khẩu (tối thiểu 6 ký tự)" id="registerPassword" required>
+        </div>
+        <div class="form-group">
+          <label>Xác nhận mật khẩu *</label>
+          <input type="password" placeholder="Xác nhận mật khẩu" id="registerConfirmPassword" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Đăng Ký</button>
+        <div id="registerMessage"></div>
+        <p>Đã có tài khoản? <a href="" onclick="openLoginModal(event)">Đăng nhập ngay</a></p>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

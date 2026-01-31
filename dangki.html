@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đăng Ký - Khách Sạn Cao Cấp</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="navbar">
+        <div class="logo">
+          <h1><img src="images/logo.png" alt="Logo"> Khách Sạn Cao Cấp</h1>
+        </div>
+        <nav class="nav-menu">
+          <a href="trangchu.html">Trang Chủ</a>
+          <a href="phongnghi.html">Phòng Nghỉ</a>
+          <a href="dichvu.html">Dịch Vụ</a>
+          <a href="lienhe.html">Liên Hệ</a>
+        </nav>
+        <div class="auth-menu">
+          <button id="loginBtn" class="btn btn-outline">Đăng Nhập</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container main-content">
+    <div class="auth-form-container">
+      <h1>Tạo Tài Khoản Mới</h1>
+      
+      <form id="registerForm" class="auth-form">
+        <div class="form-group">
+          <label>Họ và tên *</label>
+          <input type="text" id="registerName" placeholder="Nhập họ và tên" required>
+        </div>
+
+        <div class="form-group">
+          <label>Tên đăng nhập *</label>
+          <input type="text" id="registerUsername" placeholder="Nhập tên đăng nhập" required>
+        </div>
+
+        <div class="form-group">
+          <label>Email *</label>
+          <input type="email" id="registerEmail" placeholder="Nhập email" required>
+        </div>
+
+        <div class="form-group">
+          <label>Mật khẩu *</label>
+          <input type="password" id="registerPassword" placeholder="Nhập mật khẩu (tối thiểu 6 ký tự)" required>
+        </div>
+
+        <div class="form-group">
+          <label>Xác nhận mật khẩu *</label>
+          <input type="password" id="registerConfirmPassword" placeholder="Xác nhận mật khẩu" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Đăng Ký</button>
+        <div id="registerMessage"></div>
+      </form>
+
+      <p class="text-center">Đã có tài khoản? <a href="dangnhap.html">Đăng nhập ngay</a></p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Khách Sạn Cao Cấp</h4>
+          <p>Địa chỉ: 123 Đường Chính, Thành Phố, Việt Nam</p>
+          <p>Hotline: <strong>1900 1234</strong></p>
+        </div>
+        <div class="footer-section">
+          <h4>Liên Kết Nhanh</h4>
+          <ul>
+            <li><a href="phongnghi.html">Phòng Nghỉ</a></li>
+            <li><a href="dichvu.html">Dịch Vụ</a></li>
+            <li><a href="lienhe.html">Liên Hệ</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Kết Nối</h4>
+          <div class="social-links">
+            <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Khách Sạn Cao Cấp. Tất cả quyền được bảo lưu.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/auth.js"></script>
+</body>
+</html>
