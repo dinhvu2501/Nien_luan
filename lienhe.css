@@ -1,0 +1,81 @@
+/* Contact Page Specific Styles */
+
+.contact-form,
+.contact-info {
+  width: 100%;
+}
+
+.services-info {
+  margin-top: 50px;
+}
+
+.services-info h3 {
+  color: var(--primary-color);
+}
+
+.services-info h4 {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.services-info ul {
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+
+.services-info li {
+  padding: 5px 0;
+  color: #666;
+}
+
+.services-info li:before {
+  content: "✓ ";
+  color: var(--success-color);
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.map-section {
+  margin-top: 50px;
+}
+
+.faq-section {
+  margin-top: 50px;
+}
+
+.faq-section details {
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 15px;
+}
+
+.faq-section details summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.faq-section details summary i {
+  transition: transform 0.3s ease;
+}
+
+.faq-section details[open] summary i {
+  transform: rotate(90deg);
+}
+
+.faq-section details p {
+  margin-top: 10px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Contact Info Grid */
+@media (max-width: 768px) {
+  .contact-form,
+  .contact-info {
+    width: 100%;
+  }
+}
